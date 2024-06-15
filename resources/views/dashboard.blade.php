@@ -18,7 +18,7 @@
     
 
 @foreach ($name as $key => $item)
-<form method="POST" action="/result" class="containerItems">
+<form method="POST" action="/dashboard" class="containerItems">
 @csrf
 <div class="containerItems2">
 

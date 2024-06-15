@@ -68,7 +68,7 @@ class Controller
         $response = Http::get("https://pokeapi.co/api/v2/pokemon/$pokemonName");
         $data = $response->json();
 
-        if($data) {
+        if($response) {
 
             return view('result',['data' => $data]);
 

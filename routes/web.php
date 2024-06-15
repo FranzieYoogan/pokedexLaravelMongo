@@ -34,6 +34,6 @@ Route::get('/logout', [Controller::class, 'logout']);
 
 Route::get('/dashboard', [Controller::class, 'pokemons']);
 
-Route::post('/result', [Controller::class, 'sendPokemon']);
+Route::post('/dashboard', [Controller::class, 'sendPokemon']);
 
 Route::post('/result', [Controller::class, 'search']);

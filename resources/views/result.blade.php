@@ -39,11 +39,10 @@
 <h1 class="stats">DEF: {{$data['stats'][1]['base_stat']}}</h1>
 </div>
 </div>
-@endif
+@else
 
-@if(isset($error))
 
-    <h1 class="errorPokemon">POKEMONE DOESN'T EXIST</h1>
+    <h1 class="errorPokemon">POKEMON DOESN'T EXIST</h1>
     
     <script>
 
