@@ -61,6 +61,17 @@ class Controller
 
     }
 
+    public function search(Request $request) {
+
+        $pokemonName = $request->input('pokemonName');
+
+        $response = Http::get("https://pokeapi.co/api/v2/pokemon/$pokemonName");
+        $data = $response->json();
+
+        return view('result',['data' => $data]);
+
+    }
+
         
 
     public function logout(Request $request) {
