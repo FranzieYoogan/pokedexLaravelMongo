@@ -1,0 +1,27 @@
+.divFooter {
+
+    color: red;
+    text-shadow: 2px 2px 2px black;
+    font-weight: 900;
+
+}
+
+.footerStyle {
+    
+    border-top: 2px solid black;
+    background-color: white;
+}
+
+.anchorFooter {
+
+    font-weight: 900;
+    transition: 1s;
+}
+
+.anchorFooter:hover {
+    text-shadow: 2px 2px 2px orange;
+    background: -webkit-linear-gradient(red, black);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
