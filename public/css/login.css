@@ -1,0 +1,79 @@
+input {
+
+    border: 1px solid black;
+    box-shadow: none;
+
+}
+
+input:active, input:focus {
+
+
+    box-shadow: 0px 0px 4px 0px red !important;
+    border: 1px solid red !important;
+}
+
+button {
+
+    border: 1px solid black;
+    color: white;
+    background-color: red !important;
+    font-weight: 900 !important;
+    box-shadow: 2px 2px 1px 1px transparent !important;
+}
+
+button:hover {
+
+    box-shadow: 2px 2px 1px 1px black !important;
+
+}
+
+.forgotStyle {
+
+    color: red;
+    transition: 0.2s;
+}
+
+.forgotStyle:hover {
+
+    font-weight: 900;
+
+}
+
+.registerStyle {
+
+    transition: 0.3s !important;
+    color: red !important;
+
+}
+
+.registerStyle:hover {
+
+    font-weight: 900;
+
+}
+
+.imgStyle {
+
+    
+    width: 100% !important;
+}
+
+.labelStyle {
+
+    position: absolute;
+    bottom: 0.6em;
+    left: 1em;
+    font-size: 15px;
+    transition: 1s;
+    color: black;
+}
+
+.errorStyle {
+
+    border-radius: 500px;
+    border: 2px solid black;
+    height: 300px;
+    width: 300px;
+    position: fixed;
+    z-index: 60;
+}

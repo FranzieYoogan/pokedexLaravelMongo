@@ -1,0 +1,46 @@
+.navbarStyle {
+
+    border-bottom: 2px solid black;
+    
+}
+
+.anchorStyle {
+
+    color: red;
+
+}
+
+.login {
+
+    color: orange;
+
+}
+
+.anchorStyle:hover {
+
+    color: orange;
+
+}
+
+.spanHeader {
+
+    color: red;
+    font-weight: 900;
+    text-shadow: 2px 2px 2px black;
+
+}
+
+button {
+
+    border: 1px solid black;
+    color: white;
+    background-color: red !important;
+    font-weight: 900 !important;
+    box-shadow: 2px 2px 1px 1px transparent !important;
+}
+
+button:hover {
+
+    box-shadow: 2px 2px 1px 1px black !important;
+
+}
