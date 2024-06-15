@@ -12,5 +12,22 @@
 
     display: flex;
     justify-content: center;
+    
+}
+
+.containerItems22 {
+
+    background-color: red;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-bottom: 1em;
+}
+
+.pokemonTitle {
+
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    border-top: 1px solid white;
 
 }

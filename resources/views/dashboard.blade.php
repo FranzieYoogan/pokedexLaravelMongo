@@ -20,10 +20,19 @@
 @foreach ($name as $key => $item)
 <form method="POST" action="/result" class="containerItems">
 @csrf
-<div>
-<h1>{{$item['name']}}</h1>
+<div class="containerItems2">
+
+<div class="containerItems22">
+
 <button type="submit"><img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{$key + 1}}.png" alt=""></button>
 <input type="text" name="key" value="{{$key + 1}}" style="display:none">
+
+<div>
+<h1 class="pokemonTitle">{{$item['name']}}</h1>
+</div>
+
+</div>
+
 </div>
 
 </form>
