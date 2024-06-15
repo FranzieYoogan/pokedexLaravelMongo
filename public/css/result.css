@@ -74,3 +74,12 @@ footer {
     bottom: 0;
 
 }
+
+.errorPokemon {
+
+    color: white;
+    text-shadow: 2px 2px 2px black;
+    font-weight: 900;
+    padding: 10px;
+
+}

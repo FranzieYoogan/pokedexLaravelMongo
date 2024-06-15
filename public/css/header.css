@@ -12,7 +12,7 @@
 
 .login {
 
-    color: orange;
+    color: orange !important;
 
 }
 
@@ -21,6 +21,21 @@
     color: orange;
 
 }
+
+.anchorStyle2:hover {
+
+    color: orange;
+
+}
+
+.anchorStyle2 {
+
+    position: relative !important;
+    top: 0.5em !important;
+    color: red;
+}
+
+
 
 .spanHeader {
 
@@ -45,14 +60,14 @@
 
 }
 
-input {
+.inputHeader {
 
     position: relative;
-    bottom: 0.5em;
+    top: 0em;
     border: 1px solid black;
 }
 
-input:hover, input:active, input:focus {
+.inputHeader:hover, .inputHeader:active, .inputHeader:focus {
 
     box-shadow: 0px 0px 4px 0px orange !important;
     border: 1px solid orange !important;
@@ -61,7 +76,7 @@ input:hover, input:active, input:focus {
 .searchStyle {
 
     position: relative;
-    bottom: 0.5em;
+    bottom: 0em;
     background-color: red;
     border: 1px solid black;
 }
@@ -69,6 +84,7 @@ input:hover, input:active, input:focus {
 .searchStyle:hover, .searchStyle:active, .searchStyle:focus {
 
     background-color: orange !important;
+    border: 1px solid orange;
     box-shadow: 0px 0px 4px 0px orange !important;
 }
 

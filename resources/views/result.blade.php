@@ -16,7 +16,7 @@
 
 <div class="containerItems">
 
-
+@if(isset($data))
 <div class="containerSprite">
 <img class="spriteStyle" src="{{$data['sprites']['front_default']}}" alt="">
 </div>
@@ -39,7 +39,23 @@
 <h1 class="stats">DEF: {{$data['stats'][1]['base_stat']}}</h1>
 </div>
 </div>
+@endif
 
+@if(isset($error))
+
+    <h1 class="errorPokemon">POKEMONE DOESN'T EXIST</h1>
+    
+    <script>
+
+        setTimeout(() => {
+
+            window.location.href = "/dashboard"
+
+        }, 2000);
+
+    </script>
+
+@endif
 </section>
 
     @include('footer')
