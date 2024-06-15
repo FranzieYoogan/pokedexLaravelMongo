@@ -50,6 +50,17 @@ class Controller
 
     }
 
+    public function sendPokemon(Request $request) {
+
+        $key = $request->input('key');
+
+        $response = Http::get("https://pokeapi.co/api/v2/pokemon/$key");
+        $data = $response->json();
+
+        return view('result',['data' => $data]);
+
+    }
+
         
 
     public function logout(Request $request) {

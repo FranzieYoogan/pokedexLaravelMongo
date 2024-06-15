@@ -15,6 +15,10 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 });
 
+Route::get('/result', function () {
+    return view('result');
+});
+
 Route::get('/logout', function () {
     return view('logout');
 });
@@ -25,3 +29,5 @@ Route::post('/', [Controller::class, 'login']);
 Route::get('/logout', [Controller::class, 'logout']);
 
 Route::get('/dashboard', [Controller::class, 'pokemons']);
+
+Route::post('/result', [Controller::class, 'sendPokemon']);

@@ -30,7 +30,7 @@
 
 }
 
-button {
+.buttonHeader {
 
     border: 1px solid black;
     color: white;
@@ -39,7 +39,7 @@ button {
     box-shadow: 2px 2px 1px 1px transparent !important;
 }
 
-button:hover {
+.buttonHeader:hover {
 
     box-shadow: 2px 2px 1px 1px black !important;
 

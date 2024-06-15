@@ -18,15 +18,15 @@
     
 
 @foreach ($name as $key => $item)
-<div class="containerItems">
-
+<form method="POST" action="/result" class="containerItems">
+@csrf
 <div>
-
-
 <h1>{{$item['name']}}</h1>
-<img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{$key + 1}}.png" alt="">
+<button type="submit"><img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{$key + 1}}.png" alt=""></button>
+<input type="text" name="key" value="{{$key + 1}}" style="display:none">
 </div>
-</div>
+
+</form>
 @endforeach
 
 
