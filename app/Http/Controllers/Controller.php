@@ -35,6 +35,23 @@ class Controller
 
     }
 
+    public function pokemons() {
+
+    
+
+        $response = Http::get("https://pokeapi.co/api/v2/pokemon?limit=28&offset=0");
+        $data = $response->json();
+
+        $name = $data['results'];
+
+      
+
+        return view('dashboard',['name' => $name]);
+
+    }
+
+        
+
     public function logout(Request $request) {
 
         $request->session()->forget('userName');

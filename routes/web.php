@@ -23,3 +23,5 @@ Route::get('/logout', function () {
 Route::post('/', [Controller::class, 'login']);
 
 Route::get('/logout', [Controller::class, 'logout']);
+
+Route::get('/dashboard', [Controller::class, 'pokemons']);

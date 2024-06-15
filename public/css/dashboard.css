@@ -1,0 +1,16 @@
+.containerAll {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.containerItems {
+
+    display: flex;
+    justify-content: center;
+
+}
