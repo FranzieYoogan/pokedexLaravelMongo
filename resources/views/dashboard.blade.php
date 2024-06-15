@@ -24,7 +24,7 @@
 
 <div class="containerItems22">
 
-<button type="submit"><img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{$key + 1}}.png" alt=""></button>
+<button type="submit" class="buttonDashboard"><img class="spriteStyle" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{$key + 1}}.png" alt=""></button>
 <input type="text" name="key" value="{{$key + 1}}" style="display:none">
 
 <div>
