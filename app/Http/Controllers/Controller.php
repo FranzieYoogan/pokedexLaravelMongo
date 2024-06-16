@@ -25,7 +25,7 @@ class Controller
 
                 return view('welcome', ['ok' => $ok]);
 
-            } else if ($email != $item['userEmail'] && $password != $item['userPassword']) {
+            } else if ($email != $item['userEmail'] || $password != $item['userPassword']) {
 
                 $error = true;
                 return view('welcome', ['error' => $error]);
