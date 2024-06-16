@@ -83,6 +83,52 @@ class Controller
 
     }
 
+
+    public function signup(Request $request) {  
+
+        $userName = $request->input('userName');
+        $email = $request->input('email');
+        $password = $request->input('password');
+
+        $response = Http::get('http://localhost:3000/users');
+        $data = $response->json();
+
+            foreach ($data as $item) {
+
+              
+                if($item['userEmail'] != $email) {
+
+
+
+            $body = [
+
+                'userName' => $userName,
+                'userEmail' => $email,
+                'userPassword' => $password
+
+            ];
+
+            
+           Http::post('http://localhost:3000/users',$body);
+           
+            $ok = true; 
+
+            return view('signup',['ok' => $ok]);
+
+        } else {
+
+            $error = true;
+
+            return view('signup',['error' => $error]);
+
+        }
+       
+        }
+
+    }
+
+
+    
         
 
     public function logout(Request $request) {

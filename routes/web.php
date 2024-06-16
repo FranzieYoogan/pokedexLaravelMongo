@@ -37,3 +37,5 @@ Route::get('/dashboard', [Controller::class, 'pokemons']);
 Route::post('/dashboard', [Controller::class, 'sendPokemon']);
 
 Route::post('/result', [Controller::class, 'search']);
+
+Route::post('/signup', [Controller::class, 'signup']);

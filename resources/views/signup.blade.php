@@ -12,6 +12,42 @@
 
 @include('header')
 
+@if(isset($error))
+            <div style="position: relative; display: flex; justify-content: center;">
+
+            <img class="errorStyle" src="{{asset('/gifs/error.gif')}}" alt="">
+
+            </div>
+
+            <script>
+
+                setTimeout(() => {
+                    window.location.href = "/signup"
+                }, 2000);
+
+            </script>
+
+    @endif
+
+
+    @if(isset($ok))
+
+<div style="position: relative; display: flex; justify-content: center;">
+
+<img class="errorStyle" src="{{asset('/gifs/ok.gif')}}" alt="">
+
+</div>
+
+<script>
+
+setTimeout(() => {
+    window.location.href = "/"
+}, 2000);
+
+</script>
+
+@endif
+
 <section class="containerAll bg-white-50 dark:bg-gray-900">
   <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
       <a href="/" class="title flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white">
@@ -23,8 +59,8 @@
               <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
                   Create an account
               </h1>
-              <form class="space-y-4 md:space-y-6" action="#">
-
+              <form class="space-y-4 md:space-y-6" method="POST" action="/signup">
+              @csrf
               <div>
                       <label for="userName" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your userName</label>
                       <input type="text" name="userName" id="userName" class="inputSignUp bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="userName" required="">

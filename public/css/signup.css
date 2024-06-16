@@ -79,3 +79,13 @@ button:hover {
     text-shadow: 2px 2px 2px black !important;
 
 }
+
+.errorStyle {
+
+    border-radius: 500px;
+    border: 2px solid black;
+    height: 300px;
+    width: 300px;
+    position: fixed;
+    z-index: 60;
+}
