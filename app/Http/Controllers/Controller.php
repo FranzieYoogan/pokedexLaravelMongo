@@ -39,7 +39,7 @@ class Controller
 
     
 
-        $response = Http::get("https://pokeapi.co/api/v2/pokemon?limit=28&offset=0");
+        $response = Http::get("https://pokeapi.co/api/v2/pokemon?limit=68&offset=0");
         $data = $response->json();
 
         $name = $data['results'];

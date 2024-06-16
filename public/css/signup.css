@@ -1,0 +1,81 @@
+.containerAll {
+
+    display: flex;
+    justify-content: center;
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+.container2Style {
+
+    border: 2px solid black;
+    box-shadow: 1px 1px 1px 1px black !important;
+
+}
+
+.inputSignUp {
+
+    border: 1px solid black !important;
+
+}
+
+.inputSignUp:hover, .inputSignUp:active, .inputSignUp:focus {
+
+    border: 1px solid red !important;
+    box-shadow: 0px 0px 4px 0px red !important;
+    
+
+}
+
+.inputSignUpCheck {
+
+    border: 1px solid black !important;
+
+}
+
+.inputSignUpCheck:hover, .inputSignUpCheck:active, .inputSignUpCheck:focus {
+
+    border: 1px solid red !important;
+    box-shadow: 0px 0px 4px 0px red !important;
+    
+
+}
+
+
+
+
+
+button {
+
+    border: 1px solid black;
+    color: white;
+    background-color: red !important;
+    font-weight: 900 !important;
+    box-shadow: 2px 2px 1px 1px transparent !important;
+}
+
+button:hover {
+
+    box-shadow: 2px 2px 1px 1px black !important;
+
+}
+
+.terms {
+
+    color: red;
+
+}
+
+.loginHere {
+
+    color: red;
+
+}
+
+.title {
+
+    color: red !important;
+    font-weight: 900 !important;
+    text-shadow: 2px 2px 2px black !important;
+
+}
