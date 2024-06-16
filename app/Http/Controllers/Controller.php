@@ -15,6 +15,7 @@ class Controller
         $response = Http::get('http://localhost:3000/users');
         $data = $response->json();
         
+
         foreach ($data as $item) {
             
             if($email == $item['userEmail'] && $password == $item['userPassword']) {
@@ -24,7 +25,7 @@ class Controller
 
                 return view('welcome', ['ok' => $ok]);
 
-            } else {
+            } else if ($email != $item['userEmail'] && $password != $item['userPassword']) {
 
                 $error = true;
                 return view('welcome', ['error' => $error]);
@@ -86,45 +87,39 @@ class Controller
 
     public function signup(Request $request) {  
 
-        $userName = $request->input('userName');
+        $userName = ucfirst(strtolower($request->input('userName')));
         $email = $request->input('email');
         $password = $request->input('password');
-
+    
+      
         $response = Http::get('http://localhost:3000/users');
         $data = $response->json();
-
-            foreach ($data as $item) {
-
-              
-                if($item['userEmail'] != $email) {
-
-
-
+    
+      
+        $emailExists = false;
+        foreach ($data as $item) {
+            if ($item['userEmail'] == $email) {
+                $emailExists = true;
+                break;
+            }
+        }
+    
+        if ($emailExists) {
+            $error = true;
+            return view('signup', ['error' => $error]);
+        } else {
             $body = [
-
                 'userName' => $userName,
                 'userEmail' => $email,
                 'userPassword' => $password
-
             ];
-
-            
-           Http::post('http://localhost:3000/users',$body);
+    
            
-            $ok = true; 
-
-            return view('signup',['ok' => $ok]);
-
-        } else {
-
-            $error = true;
-
-            return view('signup',['error' => $error]);
-
+            Http::post('http://localhost:3000/users', $body);
+            
+            $ok = true;
+            return view('signup', ['ok' => $ok]);
         }
-       
-        }
-
     }
 
 
