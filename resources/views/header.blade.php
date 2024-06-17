@@ -19,14 +19,14 @@
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
 
   @if(!session()->get('userName'))
-    <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
-        <img src="{{asset('/icons/navbar.png')}}" class="h-8" alt="Flowbite Logo" />
+    <a href="/" class="anchorNav flex items-center space-x-3 rtl:space-x-reverse">
+        <img src="{{asset('/icons/navbar.png')}}" class="imgHeader h-8" alt="Flowbite Logo" />
         <span class="spanHeader self-center text-2xl font-semibold whitespace-nowrap dark:text-white">POKEDEX</span>
     </a>
     @else
 
-    <a href="/dashboard" class="flex items-center space-x-3 rtl:space-x-reverse">
-        <img src="{{asset('/icons/navbar.png')}}" class="h-8" alt="Flowbite Logo" />
+    <a href="/dashboard" class="anchorNav flex items-center space-x-3 rtl:space-x-reverse">
+        <img src="{{asset('/icons/navbar.png')}}" class="imgHeader h-8" alt="Flowbite Logo" />
         <span class="spanHeader self-center text-2xl font-semibold whitespace-nowrap dark:text-white">POKEDEX</span>
     </a>
     @endif
