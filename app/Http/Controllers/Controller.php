@@ -14,24 +14,32 @@ class Controller
 
         $response = Http::get('http://localhost:3000/users');
         $data = $response->json();
-        
+        $userFound = false;
 
         foreach ($data as $item) {
             
             if($email == $item['userEmail'] && $password == $item['userPassword']) {
 
                 session(['userName' => $item['userName']]);
+                $userFound = true;
+                break;
+                
+            }  
+        
+        }
+            
+            if ($userFound) {
+
                 $ok = true;
-
                 return view('welcome', ['ok' => $ok]);
+            } else {
 
-            } else if ($email != $item['userEmail'] || $password != $item['userPassword']) {
+                $error = false;
+                return view('welcome',['error' => $error]);
 
-                $error = true;
-                return view('welcome', ['error' => $error]);
             }
 
-        }
+       
    
 
     }
