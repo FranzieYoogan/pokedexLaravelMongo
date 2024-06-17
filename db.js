@@ -5,7 +5,7 @@ import cors from 'cors';
 
 const app = express();
 const port = 3000;
-const url = 'mongodb+srv://ivyarvrock:321654456123@cluster0.qk4hzjr.mongodb.net/';
+const url = 'yourCluster';
 const dbName = 'pokedexLaravel';
 let db;
 
