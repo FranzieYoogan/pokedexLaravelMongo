@@ -98,6 +98,8 @@
 
   function eventLoad()  {
 
+    const login =   document.getElementById('login')
+
     if(window.location.pathname == "/") {
 
       document.getElementById('login').style.color = "orange"
@@ -105,7 +107,9 @@
     } else if (window.location.pathname == "/signup") {
 
       document.getElementById('signup').style.color = "orange"
-   document.getElementById('login').style.color = "red"
+ 
+
+   login.style.setProperty('color', 'red', 'important');
     }
 
   }
